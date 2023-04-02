@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>도서검색</title>
+		  <style>
+		  body{
+				margin:0px;
+				text-align:center;
+				background-color:#F9423A;
+			}
+			nav{
+				padding-top:10px;
+				padding-bottom:10px;
+				text-align:center;
+				background-color:white;
+			}
+			nav a{
+				text-decoration-line:none;
+				color:black;
+			}
+			nav a:hover{
+				color:#F9423A;
+			}
+			footer{
+			text-align:center;
+				background-color:#F9423A;
+				padding:10px;
+			}
+			hr{
+				margin:0;
+			}
+			
+			#query{
+				height:40px;
+				width:300px;
+				border:none;
+				color:#F9423A;
+				text-align:center;
+				display:inline-block;
+				border:3px solid black;
+			}
+			#search{
+				background-color:black;
+				border:none;
+				height:44px;
+				margin:0px;
+				width:65px;
+				color:white;
+				border:3px solid black;
+				box-sizing:border-box;
+				margin-bottom:20px;
+			}
+			.thum{
+				display:inline-block;
+				border:2px solid black;
+				width:450px;
+				padding:20px;
+				border-radius:10px;
+				background-color:rgba(255,255,255,0.5);
+			}
+			.name{
+			text-decoration-line:none;
+				font-weight:bold;
+				width:480px;
+				margin:0 auto;
+				font-size:15px;
+				
+			}
+			.sumit{
+				width:500px;
+				margin:0 auto;
+				margin-bottom:20px;
+			}
+			a{
+				color:white;
+				text-decoration-line:none;
+				
+			}
+			a:hover{
+				color:black;
+			}
+			#o
+			
+			
+		  </style>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script>
+        $(document).ready(function () {
+            var pageNum = 1;
+ 
+            $("#search").click(function () {
+                $("div").html("");
+ 
+                $.ajax({
+                    method: "GET",
+                    url: "https://dapi.kakao.com/v3/search/book?target=title",
+                    data: { query: $("#query").val(), page: pageNum},
+                    headers: {Authorization: "KakaoAK 575349e061eaa7fee371249ede870a0b"}
+ 
+                })
+                .done(function (msg) {
+                    console.log(msg);
+                    for (var i = 0; i < 5; i++){
+                        $("#name"+i).append("<h2><a href='"+ msg.documents[i].url +"'>" + msg.documents[i].title + "</a></h2>");
+                        $("#writer"+i).append("<strong>저자:" + msg.documents[i].authors + "</strong> &nbsp;");
+                        $("#writer"+i).append("<strong>출판사:" + msg.documents[i].publisher+"</strong> "+"<br>");
+                        $("#sumit"+i).append("<strong>요약:</strong> " + msg.documents[i].contents + "...<br>");
+                        $("#thumbnail"+i).append("<img src='" + msg.documents[i].thumbnail + "'/><br>");
+                    }
+                });
+            })
+ 
+   
+        })
+
+ </script>
+ </head>
+<body>
+ 
+<nav>
+			<a href="./내 프로필.html" >
+			<STRONG>PROFILE</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./폼과 자바스크립트.html">
+			<STRONG>FORM</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./index.html">
+			<STRONG>HOME</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./제이쿼리 응용프로그램.html">
+			<STRONG>JQUERY</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./공공데이터.html">
+			<STRONG>AJAX</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</nav>
+<hr size="2px" color="black">
+
+		
+<!--검색------->
+<h1>▼</br>도서검색</h1>
+<h4>찾는 도서의 키워드를 입력하세요<h3>
+<span id="en">
+    <input type="text" id="query" placeholder="도서명">
+    <button id="search">검색</button>
+</span>
+<!--본문1------->
+</br>
+		<div class="thum" id="thumbnail0"></div>
+<p id="">
+		<div class="name" id="name0"></div>
+		<div id="writer0"></div>
+</p>
+		<div class="sumit" id="sumit0"></div>
+
+<!--본문------->			
+		<div class="thum" id="thumbnail1"></div>
+		<div class="name" id="name1"></div>
+		<div id="writer1"></div>
+		<div class="sumit" id="sumit1"></div>
+<!--본문------->			
+		<div class="thum" id="thumbnail2"></div>
+		<div class="name" id="name2"></div>
+		<div id="writer2"></div>
+		<div class="sumit" id="sumit2"></div>
+<!--본문------->			
+		<div class="thum" id="thumbnail3"></div>
+		<div class="name" id="name3"></div>
+		<div id="writer3"></div>
+		<div class="sumit" id="sumit3"></div>
+<!--본문------->			
+		<div class="thum" id="thumbnail4"></div>
+		<div class="name" id="name4"></div>
+		<div id="writer4"></div>
+		<div class="sumit" id="sumit4"></div>
+
+<hr size="2px" color="black">
+<footer>
+			<div id="f2">
+			<a href="https://mail.google.com/mail/u/0/"> <span style="color:black;" class="material-icons">email</span></a>
+			<span class="material-icons">smartphone</span>
+			<a href="https://www.instagram.com/"><span style="color:black;" class="material-icons">public</span></a>
+			</div>
+			<div id="f1"><STRONG>멀티미디어 공학과 20201136 임서현</STRONG><div>
+</footer>
+</body>
+</html>

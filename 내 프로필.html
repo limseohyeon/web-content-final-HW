@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+		<title>PROFILE</title>
+		<style>
+		body{
+			margin:0px;	
+			background-color:#F9423A;
+		}
+			nav{
+				padding-top:10px;
+				padding-bottom:10px;
+				text-align:center;
+				background-color:white;
+			}
+			nav a{
+				text-decoration-line:none;
+				color:black;
+			}
+			nav a:hover{
+				color:#F9423A;
+			}
+			hr{
+				margin:0;
+			}
+			header img{
+				padding-top:10px;
+				position: absolute;
+				margin:0 auto;
+				position: relative;
+				display:block;
+				
+			}
+			header p{
+				font-family: 'Noto Serif KR', serif;
+				 position: absolute;
+				 top:50%;
+				 left:50%;
+				 transform: translate(-130%, -130%);                                                                   
+				 font-size:60px;
+				 color: white;
+				 z-index: 2;
+				 text-align:left;
+
+			}
+			section{
+				text-align:center;
+			}
+
+			footer{
+			text-align:center;
+				background-color:#F9423A;
+				padding:10px;
+			}
+			.total{
+				margin:0 auto;
+			}
+			.total2{
+				text-align:center;
+			}
+			.total3{
+				
+			}
+			#title{
+				margin:0 auto;
+				border:4px solid black;
+				width:1080px;
+				text-align:left;				
+				font-size:40px;
+				font-weight:bold;
+				margin-top:50px;
+				background-color:black;
+				border-radius:5px;
+				padding-left:20px;
+			}
+			#title2{
+				border:none;
+				background-color:black;
+				font-size:30px;
+				padding:10px;
+				width:100px;
+				margin:0 auto;
+				border-radius:10px;
+				font-weight:bold;
+				color:#F9423A;
+			}
+			
+			
+			#i1{
+			color:#F9423A;
+			}
+/*기본정보*/	
+			#abu1{
+				display:inline-block;
+				margin-top:20px;
+			}
+			#abu2{
+				 display:inline-block;
+			}
+					#abu2 nl{
+						font-weight:bold;
+						font-size:22px;
+						margin-right:50px;
+						text-align:left;
+					}
+			#abu1-1{
+				
+				font-weight:bold;
+				text-align:left;
+				border:3px solid black;
+				width:600px;
+				padding-left:10px;
+				border-radius:10px;
+				box-sizing:border-box;
+				margin:20px;
+				margin-right:20px;
+				background-color:white;
+				height:80px;
+			}
+			#abu1 span{
+				font-size:35px;
+				display:inline-block;
+				margin-left:120px;
+				
+			}
+			#abu2{
+				border:3px solid black;
+				box-sizing:border-box;
+				width:390px;
+				padding-left:20px;
+				padding-right:10px;
+				padding-top:40px;
+				height:280px;
+				border-radius:10px;
+				background-color:white;
+				
+			}
+/*특성*/					
+			#per1{
+			text-align:center;
+				}
+			#per2{
+			text-align:center;
+			}
+			#graph1,#graph2,#graph3{
+				display:inline-block;
+				border:3px solid black;
+				margin:0;
+				width:200px;
+				height:100px;
+				background-color:white;
+				font-weight:bold;
+			}
+			#graph4,#graph5{
+				display:inline-block;
+				border:3px solid black;
+				width:305px;
+				height:100px;
+				background-color:white;
+				font-weight:bold;
+			}
+			#graph1-1{
+				background-color:lightgray;
+				height:30px;
+				margin:0;
+				text-align:center;
+				padding:4px;
+				box-sizing:border-box;
+			}
+				#graph4-1{
+				background-color:lightgray;
+				height:30px;
+				margin:0;
+				text-align:center;
+				padding:4px;
+				box-sizing:border-box;
+			}
+	/*모토*/	
+			.moto span{
+				font-family: 'Catamaran', sans-serif;
+			}
+			.moto{
+				padding:50px;
+			}
+			#moto1{
+				margin:0 auto;
+				font-size:30px;
+				font-weight:bold;
+				border:3px solid black;
+				background-color:white;
+				width:620px;
+				border-radius:10px;
+				margin-top:30px;
+				display:inline-block;
+				padding-top:30px;
+			}
+/*취미*/	
+			#hob1{
+				display:inline-block;
+				margin-right:40px;
+				margin-top:100px;
+			}
+			#hob3{
+				display:inline-block;
+				
+			}
+			#hob2-1{
+				width:400px;
+				font-size:20px;
+				padding:10px;
+				text-align:center;
+				border-radius:10px;
+				font-weight:bold;
+			}
+			#hob2-2{
+				margin-bottom:0;
+				font-size:30px;
+				font-weight:bold;
+			}
+			
+/*학력 주소*/				
+			#ed1{
+			text-align:center;
+				background-color:black;
+				height:10px;
+				font-size:30px;
+				width:1000px;
+				margin:0 auto;
+				
+
+			}
+			#ed2 a{
+				text-decoration-line:none;
+				color:black;
+				margin:30px;
+				font-weight:bold;
+				
+			}		
+			#ed2 a:hover{
+				text-decoration-line:none;
+				color:white;
+			}
+			#home{
+				font-size:30px;
+				width:300px;
+				margin-right:60px;
+			}
+		</style>
+	</head>
+	
+	
+<body>
+<nav>
+			<a href="./내 프로필.html" >
+			<STRONG>PROFILE</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./폼과 자바스크립트.html">
+			<STRONG>FORM</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./index.html">
+			<STRONG>HOME</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./제이쿼리 응용프로그램.html">
+			<STRONG>JQUERY</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./공공데이터.html">
+			<STRONG>AJAX</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</nav>
+<hr size="2px" color="black">
+<!----------------header------------------------>
+<header>
+			<span><img src="./img/p1.jpg"></span>
+			<p>안녕하세요!</br>제 이름은</br>
+			<STRONG>'임서현'</STRONG>입니다</p>
+</header>
+<!----------------section------------------------>
+<section>
+<div class="total"> 
+<!-----------------ABOUT ME------------------------>
+<p style="color:#F9423A;" id="title">ABOUT <span style="color:white;">ME!</span></p>
+<div class="total2">
+		<div id="abu1">
+			<p id="abu1-1"><img style="width:70px;" src="./img/이름.png"></img>
+				&emsp;&emsp;&emsp;&emsp;&nbsp;
+				<span>임서현</span>
+			</p>
+			<p id="abu1-1"><img style="width:70px;" src="./img/생일.png"></img>
+				<span>1999년09월21일</span>
+			</p>
+			<p id="abu1-1"><img style="width:70px;" src="./img/전화번호.png"></img>
+				&emsp;<span>010-6577-9921</span>
+			</p>
+		
+		</div>
+			<div id="abu2">
+			
+				<nl>
+					<li><span style="color:#F9423A; font-weight:bold;">BLOOD TYPE-</span>
+					<span style="color:gray;"></span>B형</br></br>
+					<li><span style="color:#F9423A;font-weight:bold;">BARTH SING-</span>
+					<span style="color:gray;"></span>처녀자리</br></br>
+					<li><span style="color:#F9423A;font-weight:bold;">GENDER-</span>
+					<span style="color:gray;"></span>여성</br></br>
+					<li><span style="color:#F9423A;font-weight:bold;">E-MAIL-</span>
+					<span style="color:gray;"></span>iacsbe36@gmail.com
+				</nl>
+			</div>
+</div>
+<!-----------------취미------------------------>
+<p style="color:white;" id="title"><span style="color:#F9423A;">MY </span>HOBBY!</p>
+<div class="total2">
+		<div id="hob1">
+		<div style="border:4px solid black; width:500px; height:500px; border-radius:10px; background-color:white;">
+			 &nbsp;<p id="hob1-1"><img style="width:400px; " src="./img/그래프.png"></img> </p>
+			<span style="  font-size:30px; display:inline-block; font-weight:bold; border:1px solid #F9423A; background-color:#F9423A; width:450px; border-radius:10px;
+			" >취미 그래프</span>
+	</div>
+			<p id="hob3-1">
+				<img src="./img/말풍선.png"></img>
+			</p>
+			<img style="width:453px;" src="./img/집.png"></img>
+		</div>
+		
+		<div style=" background-color:white; border:4px solid black; border-radius:10px; padding:20px;" id="hob3">
+				<p id="hob2-1" style=" color:white; background-color:black;">좋아하는 만화
+					<p id="hob2-2">[아따맘마]</p>
+					<p id="hob2-3">
+					언제나 즐거운 엄마와, 무뚝뚝한 시골출신 아빠</br>
+					꿈 많은 여고생 아리, 사춘기 중학생 동동!!</br>
+					네 가족의 따뜻하면서도 배꼽잡게 만드는 이야기</p>
+					<img style="width:200px;" src="./img/아따맘마.png"></img>
+					<img style="width:200px;" src="./img/아따맘마2.png"></img>
+				</p>
+				<p id="hob2-1" style=" color:white; background-color:black; clear:both;">좋아하는 게임
+					<p id="hob2-2">[동물의숲]</p>
+					<p id="hob2-3">
+						현실과 동일한 시간이 흐르는 세계에서</br>
+						마음 가는 대로 하루하루를 보내는「동물의 숲</br>
+						 무인도로 이주, 하나하나 내 손으로 꾸리는</br>
+						 새로운 생활. 당신은 어떤 삶을 꿈꾸고 계신가요?
+					</p>
+					<img style="width:200px;" src="./img/동물의숲.jpg"></img>
+					<img style="width:200px;" src="./img/동물의숲2.jpg"></img>
+				</p>
+				<p id="hob2-1" style=" color:white; background-color:black;">좋아하는 음악
+					<p  id="hob2-2">[신나는 걸그룹 노래]</p>
+					<p  id="hob2-3">
+						경쾌한 리듬과 멋진 춤이 어우러지는</br>
+						걸그룹의 신나는 노래를 좋아합니다.</br>
+						아이즈원과 트와이스를 그룹중에서</br>
+						제일 좋아하고 있어요!
+						
+					</p>
+					<img style="width:200px;" src="./img/아이즈원.jpg"></img>
+					<img style="width:200px;" src="./img/트와이스.jfif"></img>
+					</br>
+					
+				</p>
+		</div>
+		</div>
+		
+<!-----------------특성------------------------>
+<p style="color:white;" id="title"><span style="color:#F9423A;">MY </span>PERSONALITY!</p>
+<div class="total2">
+
+<img style="margin-top:20px; display:inline-block; width:625px; border:3px solid black; border-radius:10px;" src="./img/그래프.jpg">
+
+		<p id="per1">
+					<div id="graph1">
+						<p id="graph1-1">사교성</p>
+						<p id="graph1-2">낯가림이 심하지만</br>잘 지내는 편이에요.</p>
+					</div>
+					<div id="graph2">
+						<p id="graph1-1">전투력</p>
+						<p id="graph1-2">매사에 무덤덤해요.</br>쉽게 화내지 않습니다.</p>
+					</div>
+					<div id="graph3">
+						<p id="graph1-1">행동력</p>
+						<p id="graph1-2">그때그때 달라요.</br>때론 빠릿 때론 게을~</p>
+					</div>
+		</p>
+		<p id="per2">
+					<div id="graph4">
+							<p id="graph4-1">정신력</p>
+							<p id="graph4-2">쉽게 흔들리지 않아요.</br>어떤 일이 닥쳐도 차분한편이에요.</p>
+					</div>
+					<div id="graph5">
+						<p id="graph4-1">창의력</p>
+						<p id="graph4-2">독창적인 아이디어가 많아요</br>새로운 생각 하는걸 좋아합니다.</p>
+					</div>
+		</p>
+<!-------모토---------->			
+	<div class="moto">
+	<p id="title2">MOTO</p>
+				<p id="moto1"><span style="font-size:50px;">"</span></br>자신이 사는 인생을 사랑하고</br>자신이 사랑하는 인생을 살아라</br></br><span style="font-size:50px;">"</span></p>
+	</div>
+					
+</div>
+<!-----------------학력,주소------------------------>
+<p style="color:#F9423A;" id="title"><span style="color:white;">EDU</span> & <span style="color:white;">HOMETOWN!</span></p>
+<div class="edu">
+			</br></br></br>
+			<div style="font-weight:bold;">2013&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+			&emsp;&emsp;2016&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+			2018&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+			&emsp; 2020</div>
+			<div id="ed1">
+			</div>
+				<span>▼ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+				▼ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+				▼ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+				▼
+			<span>
+			<div id="ed2">
+					<a href="http://school.cbe.go.kr/samwon-e">충주삼원초등학교 졸업</a>
+					<a href="http://school.cbe.go.kr/cjjungang-m">충주중앙중학교 졸업</a>
+					<a href="http://school.cbe.go.kr/chungjugirl-h">충주여자고등학교 졸업</a>
+					<a href="https://www.andong.ac.kr/main/index.do">국립안동대학교 재학중</a>
+			</div>
+			<div id="ed3">
+			</div>
+
+</div>
+<!-------충주소개---------->	
+<div>
+<div style="font-size:30px; font-weight:bold; margin:30px;">▼</br>사과가 맛있고, 경치가 아름다운</br>한반도의 중심!</div>
+			<img style="border:3px solid black; width:350px; margin-top:30px; border-radius:10px;" src="./img/충주사과.jpg"></img><img style="border-radius:10px; margin-top:30px; border:3px solid black; width:350px;" src="./img/충주사진.jpg"></img></br>
+			
+			<img style="width:700px; border:3px solid black; border-radius:10px; background-color:rgba(255,255,255,0.5); margin-bottom:80px;" src="./img/지도.png"></img>
+			</div>
+<div>
+</div>			
+<!----------------section------------------------>
+		</div>
+		</section>
+<!-----------------footer------------------------>
+		<hr size="2px" color="black">
+		<footer>
+			<div id="f2">
+			<a href="https://mail.google.com/mail/u/0/"> <span style="color:black;" class="material-icons">email</span></a>
+			<span class="material-icons">smartphone</span>
+			<a href="https://www.instagram.com/"><span style="color:black;" class="material-icons">public</span></a>
+			</div>
+			<div id="f1"><STRONG>멀티미디어 공학과 20201136 임서현</STRONG><div>
+		</footer>
+	</body>
+</html>

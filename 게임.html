@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		  <style>	  
+		  body{
+				margin:0px;
+			}
+
+			nav{
+				padding-top:10px;
+				padding-bottom:10px;
+				text-align:center;
+				background-color:white;
+			}
+			nav a{
+				text-decoration-line:none;
+				color:black;
+			}
+			nav a:hover{
+				color:#F9423A;
+			}
+			footer{
+			text-align:center;
+				background-color:#F9423A;
+				padding:10px;
+			}
+			hr{
+				margin:0;
+			}
+			.main{
+				text-align:center;
+			}
+			#dialog{
+				margin:0 auto;
+				border:3px solid black;
+				padding:10px;
+				border-radius:10px;
+				width:498px;
+				box-sizeing:border-box;
+				background-color:white;
+			}
+			#msg0{
+			
+				font-size:19px;
+				margin-bottom:5px;
+			
+			}
+			#msg{
+				font-size:25px;
+				font-weight:bold;
+			}
+			.cultivate{
+				text-align:center;
+			}
+			.c1{
+				display:inline-block;
+			}
+			.c2{
+				border:1px solid black;
+				font-size:20px;
+				font-weight:bold;
+				background-color:#AAEBAA;
+				padding:10px;
+				width:80px;
+				margin-top:10px;
+				margin-right:15px;
+				margin-left:15px;
+				margin-bottom:0px;
+			}
+			.c3{
+				border:1px solid black;
+				font-size:20px;
+				margin-right:15px;
+				margin-left:15px;
+				padding:10px;
+				width:80px;
+				margin-top:0px;
+				margin-bottom:10px;
+				}
+			#g2{
+				border:1px solid #FFF064;
+				margin:0 auto;
+				background-color:#FFF064;
+				width:505px;
+				padding:5px;
+			}
+			.g3{
+				border:1px solid black;
+				font-size:20px;
+				padding:10px;
+				width:100px;
+				margin-top:0px;
+				background-color:white;
+				margin-right:16px;
+				margin-left:17px;
+				margin-top:10px;
+				margin-bottom:30px;
+			}
+			#break{
+				background-color:red;
+				color:white;
+			}
+			.help{
+				margin-left:200px;
+			}
+			.h1{
+				border:1px solid black;
+				width:100px;
+				margin-right:2px;
+				margin-left:2px;
+				margin-bottom:2px;
+				height:40px;
+				margin-top:20px;
+				box-sizing:border-box;
+			}
+			#heart{	
+				background-color:white;
+				color:#FE3369;
+				font-size:20px;
+			}
+			#help{
+				background-color:#FFF064;
+				color:black;
+				font-size:20px;
+			}
+			#new{
+				background-color:#B2D9FA;
+				color:black;
+				font-size:20px;
+			}
+			#overlay_t {
+			background-color: #000; bottom: 0; left: 0; opacity: 0.5; filter: alpha(opacity = 50); /* IE7 & 8 */ position: fixed; right: 0; top: 0; z-index: 99; display:none;
+			}
+			#popup_layer {
+			width:400px; margin-bottom:30px; background:#fff; border:solid 1px #ccc; position:absolute; top:260px; left:50%; margin-left:-200px; box-shadow: 0px 1px 20px #333; z-index:100; display:none;
+			height:400px;
+			margin-bottom:300px;
+			text-align:center;
+			}
+			#popup_layer2{
+			width:400px; margin-bottom:30px; background:#fff; border:solid 1px #ccc; position:absolute; top:260px; left:50%; margin-left:-200px; box-shadow: 0px 1px 20px #333; z-index:100; display:none;
+			height:400px;
+			margin-bottom:300px;
+			text-align:center;
+			}
+			#lable{
+				border:1px solid black;
+				padding:10px;
+				margin-top:10px;
+				margin-right:0;
+				margin-left:0;
+				background-color:#F9423A;
+				font-weight:bold;
+				margin-bottom:20px;
+			}
+			#text{
+				width:300px;
+				height:200px;
+				text-align:center;
+				border:1px solid black;
+				margin-bottom:20px;
+			}
+			#teach{
+				border:1px solid black;
+				background-color:white;
+				font-weight:bold;
+				width:100px;
+				height:50px;	
+			}
+			#teach:hover{
+				background-color:black;
+				color:white;
+			}
+			#popup_layer3{
+			width:400px; margin-bottom:30px; background:#fff; border:solid 1px #ccc; position:absolute; top:260px; left:50%; margin-left:-200px; box-shadow: 0px 1px 20px #333; z-index:100; display:none;
+			height:500px;
+			margin-bottom:300px;
+			text-align:center;
+			}
+			#popup_layer4{
+			width:400px; margin-bottom:30px; background:#fff; border:solid 1px #ccc; position:absolute; top:260px; left:50%; margin-left:-200px; box-shadow: 0px 1px 20px #333; z-index:100; display:none;
+			height:500px;
+			margin-bottom:300px;
+			text-align:center;
+			}
+			#popup_layer5{
+			width:400px; margin-bottom:30px; background:#fff; border:solid 1px #ccc; position:absolute; top:260px; left:50%; margin-left:-200px; box-shadow: 0px 1px 20px #333; z-index:100; display:none;
+			height:500px;
+			margin-bottom:300px;
+			text-align:center;
+			}
+			#popup_layer6{
+			width:400px; margin-bottom:30px; background:#fff; border:solid 1px #ccc; position:absolute; top:260px; left:50%; margin-left:-200px; box-shadow: 0px 1px 20px #333; z-index:100; display:none;
+			height:500px;
+			margin-bottom:300px;
+			text-align:center;
+			}
+			#born2{
+				font-weight:bold;
+			}
+			#born{
+			margin:0 auto;
+				text-align:center;
+				border:2px solid black;
+				width:300px;
+				height:50px;
+				border-radius:10px;
+				padding:5px;
+				margin-bottom:20px;	
+			}
+			#born3{
+				margin:0 auto;
+				text-align:center;
+				border:2px solid black;
+				width:300px;
+				height:70px;
+				border-radius:10px;
+				padding:5px;
+				margin-bottom:20px;	
+			}
+			#born-look{
+				background-color:white;
+				border:2px solid black;
+				padding:10px;
+				font-weight:bold;
+			}
+			#born-look:hover{
+				background-color:black;
+				color:white;
+			}
+			#look{
+			background-color:white;
+				border:2px solid black;
+				padding:5px;
+				font-weight:bold;
+			}
+			#look:hover{
+			background-color:black;
+				color:white;
+			}
+			#popup_layer2 img{
+				border:2px solid black;
+				border-radius:10px;
+			}
+			.im{
+			text-align:center;
+				width:100px;
+				height:100px;
+				margin-right:20px;
+				margin-left:20px;
+				margin-bottom:20px;
+				
+			}
+			#popup_layer11 { width:700px; height:484px; margin-bottom:30px; background:#fff; border:solid 1px #ccc; position:absolute; top:260px; left:50%; margin-left:-200px; box-shadow: 0px 1px 20px #333; z-index:100; display:none;}
+
+			
+			
+		  </style>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		var heart = $("#heart").val();
+		var edu = $("#lear1").val();
+		var eat = $("#food1").val();
+		var cle = $("#wash1").val();
+		var heart = $("#heart").val();
+		var ran = Math.floor(Math.random() * 3)+3;
+
+<!-----------------깨버리기------------------------>	
+						$("#break").click(function(){
+						$("#heart").text('X');
+						$("#egg").attr("src","./img/알4.jpg");
+						$("#msg0").text("알(0세)/사망");
+						$("#msg").text("게임끝");
+						$(".c3").text("X");
+						$(".g3").text("X");
+						$("#dialog").css("background-color","#F52020");
+						$("#lear1").attr("disabled","bisabled");
+						$("#food1").attr("disabled","bisabled");
+						$("#wash1").attr("disabled","bisabled");
+								});
+<!-----------------가르치기------------------------>
+		$("#lear1").click(function(){
+	if(0<heart){
+				edu=parseInt(edu)+25;
+				$("#edu1").text("");
+				$("#edu1").text(edu+"%");
+				heart=parseInt(heart)-1;
+				$("#heart").text(heart);
+					 
+$('#popup_layer, #overlay_t').show();
+    $('#popup_layer').css("top", Math.max(0, $(window).scrollTop() + 100) + "px");
+        // $('#popup_layer').css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+    $('#teach, .close').click(function(e){
+        e.preventDefault();
+        $('#popup_layer, #overlay_t').hide();
+		$("#msg").text('"'+$("#text").val()+'"');
+    });
+	}
+
+	else{
+			$('#popup_layer6, #overlay_t').show();
+        $('#popup_layer6').css("top", Math.max(0, $(window).scrollTop() + 100) + "px");
+        // $('#popup_layer').css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+		$('#look, .close').click(function(e){
+        e.preventDefault();
+        $('#popup_layer6, #overlay_t').hide();
+		});	
+		
+	$('#look').click(function(){	
+	$('#popup_layer'+ran+', #overlay_t').show();
+    $('#popup_layer'+ran).css("top", Math.max(0, $(window).scrollTop() + 100) + "px");
+        // $('#popup_layer').css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+		 });
+	}
+								});
+<!-----------------청결------------------------>
+$("#wash1").click(function(){
+if(0<heart){
+				cle=parseInt(cle)+25;
+				$("#clean1").text("");
+				$("#clean1").text(cle+"%");
+				heart=parseInt(heart)-1;
+				$("#heart").text(heart);	
+				$("#msg").text('"깨끗해졌네!"');
+				}
+else{
+	$('#popup_layer6, #overlay_t').show();
+        $('#popup_layer6').css("top", Math.max(0, $(window).scrollTop() + 100) + "px");
+        // $('#popup_layer').css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+		$('#look, .close').click(function(e){
+        e.preventDefault();
+        $('#popup_layer6, #overlay_t').hide();
+		});	
+		
+	$('#look').click(function(){	
+	$('#popup_layer'+ran+', #overlay_t').show();
+    $('#popup_layer'+ran).css("top", Math.max(0, $(window).scrollTop() + 100) + "px");
+        // $('#popup_layer').css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+		 });
+}
+});	
+<!-----------------밥주기------------------------>
+$("#food1").click(function(){
+var ran2 = Math.floor(Math.random() * 4)+1;
+var one = $("#i1").val();
+console.log(ran2);
+		if(0<heart){
+				eat=parseInt(eat)+25;
+				$("#sati1").text("");
+				$("#sati1").text(eat+"%");
+				heart=parseInt(heart)-1;
+				$("#heart").text(heart);
+				
+	$('#popup_layer2, #overlay_t').show();
+    $('#popup_layer2').css("top", Math.max(0, $(window).scrollTop() + 100) + "px");
+       	   // $('#popup_layer').css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+		$("#i1").click(function(){
+			if($("#i1").val()==ran2){
+				$(".no").text("");
+				$("#msg").text('"잘먹었습니다!"');
+				ran2=0;
+				$('#popup_layer2, #overlay_t').hide();
+			}	
+			else{
+				$(".no").text('"퉤퉤!"');	}
+				});
+				
+		$("#i2").click(function(){
+			if($("#i2").val()==ran2){
+				$(".no").text("");
+				$("#msg").text('"맛있게 먹었습니다!"');
+				ran2=0;
+				$('#popup_layer2, #overlay_t').hide();
+			}
+			else{
+					$(".no").text('"으악!"');	}
+				});	
+				
+				
+			$("#i3").click(function(){
+			if($("#i3").val()==ran2){
+				$(".no").text("");
+				$("#msg").text('"배불러요!"');
+				ran2=0;
+				$('#popup_layer2, #overlay_t').hide();
+			}
+			else{
+					$(".no").text('"싫어요!"');	}
+				});	
+			
+			
+				$("#i4").click(function(){
+			if($("#i4").val()==ran2){
+				$(".no").text("");
+				$("#msg").text('"냠냠"');
+				ran2=0;
+				$('#popup_layer2, #overlay_t').hide();
+			}
+			else{
+					$(".no").text('"안먹을래요!"');	}
+				});
+				}
+
+//성장1
+	else{
+       $('#popup_layer6, #overlay_t').show();
+        $('#popup_layer6').css("top", Math.max(0, $(window).scrollTop() + 100) + "px");
+        // $('#popup_layer').css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+		$('#look, .close').click(function(e){
+        e.preventDefault();
+        $('#popup_layer6, #overlay_t').hide();
+		});	
+		
+	$('#look').click(function(){	
+	$('#popup_layer'+ran+', #overlay_t').show();
+    $('#popup_layer'+ran).css("top", Math.max(0, $(window).scrollTop() + 100) + "px");
+        // $('#popup_layer').css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+
+	});
+	}
+	});
+
+							
+
+<!-----------------분양------------------------>						
+						$("#new").click(function(){
+							$("#heart").val('4');
+							i=4;
+						$("#egg").attr("src","./img/알3.jpg");
+						$("#msg0").text("알(0세)/아기");
+						$("#msg").text('"안녕하세요!"');
+						$("#age1").text("0세");
+						$("#sati1").text("0%");
+						$("#clean1").text("0%");
+						$("#edu1").text("0%");
+						$("#food1").text("밥주기");
+						$("#wash1").text("씻기기");
+						$("#lear1").text("배우기");
+						$("#break").text("깨버리기");
+						$("#dialog").css("background-color","white");
+						edu=0;
+						eat=0;
+						cle=0;
+						$("#edu1").text(edu+"%");
+						$("#clean1").text(cle+"%");
+						$("#sati1").text(eat+"%");
+						heart=4;
+						$("#heart").text(heart);
+						$("#lear1").attr("disabled",false);
+						$("#food1").attr("disabled",false);
+						$("#wash1").attr("disabled",false);
+						
+								});
+<!-----------------분양------------------------>
+
+
+       $('#help').click(function(){
+        $('#popup_layer11, #overlay_t').show();
+        $('#popup_layer11').css("top", Math.max(0, $(window).scrollTop() + 100) + "px");
+		$("#msg").text('"안녕하세요!"');
+        // $('#popup_layer').css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+    });
+    $('#overlay_t, .close').click(function(e){
+        e.preventDefault();
+        $('#popup_layer11, #overlay_t').hide();
+    });
+
+
+
+		});
+	
+	</script>
+	</head>
+	<body>
+	<nav>
+			<a href="./내 프로필.html" >
+			<STRONG>PROFILE</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./폼과 자바스크립트.html">
+			<STRONG>FORM</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./index.html">
+			<STRONG>HOME</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./제이쿼리 응용프로그램.html">
+			<STRONG>JQUERY</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./공공데이터.html">
+			<STRONG>AJAX</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</nav>
+<hr size="2px" color="black">
+<!-----------------도움말------------------------>
+<section>	
+<div style="text-align:center;" class="help">
+		<button class="h1" id="heart" value="4">4</button>
+		<input type="button" class="h1" id="new" value="분양받기">
+		<input type="button" class="h1" id="help" value="도움말">
+</div>
+<!-----------------footer------------------------>			
+		<div class="main">
+		<img style="width:520px;" id="egg" src="./img/알3.jpg"></img>
+		<div id="dialog">
+			<div id="msg0">알(0세)/아기</div>
+			<div id="msg">"도움말을 눌러주세요!"</div>
+			
+		</div>
+		</div>
+		
+<!-----------------메인------------------------>		
+<div class="cultivate">	
+	<div id="age" class="c1">
+		<p class="c2">나이</p>
+		<p class="c3" id="age1" value='0'>0세</p>
+	</div>
+	<div id="satiety" class="c1">
+		<p class="c2">포만감</p>
+		<p class="c3" id="sati1">0%</p>
+	</div>
+	<div id="cleanliness" class="c1">
+		<p class="c2">청결</p>
+		<p class="c3" id="clean1">0%</p>
+	</div>
+	<div id="education" class="c1">
+		<p class="c2">학습</p>
+		<p class="c3" id="edu1">0%</p>
+	</div>
+</div>
+<!-----------------키우기------------------------>		
+<div style="text-align:center;" class="growth">
+		<div id="g2">아래의 버튼을 눌러 알을 키워 보세요.</div>
+		<button class="g3" id="food1" value="0">밥주기</button>
+		<button class="g3" id="wash1" value="0">씻기기</button>
+		<button class="g3" id="lear1" value="0">배우기</button>
+		<input type="button" class="g3" id="break" value="깨버리기">
+</div>
+</section>
+<!-----------------footer------------------------>		
+		<hr size="2px" color="black">
+		<footer>
+			<div id="f2">
+			<a href="https://mail.google.com/mail/u/0/"> <span style="color:black;" class="material-icons">email</span></a>
+			<span class="material-icons">smartphone</span>
+			<a href="https://www.instagram.com/"><span style="color:black;" class="material-icons">public</span></a>
+			</div>
+			<div id="f1"><STRONG>멀티미디어 공학과 20201136 임서현</STRONG><div>
+		</footer>
+<!-----------------교육팝업------------------------>	
+<div id="overlay_t"></div>
+<div id="popup_layer">
+	<div id="lable">알에게 가르치고싶은 말을 입력하세요.</div>
+	<input type="text" id="text" placeholder="ex)만나서 반가워요!"></br>
+	<button id="teach">가르치기</button>
+</div>
+
+<!-----------------식사팝업------------------------>
+<div id="popup_layer2">
+<div id="lable">알이 좋아하는 음식 맞추기!</br>(알은 싫어하는 음식이면 먹지 않아요!)</div>
+<button id="i1" class="im" value="1"><img src="./img/1.jpg"></img></button>
+<button id="i2" class="im" value="2"><img src="./img/2.jpg"></img></button>
+</br>
+<button id="i3" class="im" value="3"><img src="./img/3.jpg"></img></button>
+<button id="i4" class="im" value="4"><img src="./img/4.jpg"></img></button>
+<div style="font-size:30px;" class="no" id="born"></div>
+</div>
+<!-----------------성장------------------------>
+<div id="popup_layer3">
+	<div id="lable">성장</div>
+	<div>~짜잔~</div>
+	<img src="./img/고릴라.jpg"></img>
+		<div id="born3">
+		<div>고릴라(1세)/아기</div>
+		<div id="born2">"키워주셔서 감사했습니다</br>덕분에 훌륭한 고릴라로 자랐어요"</div>
+		</div>
+	<a href="./게임.html"><button id="born-look">처음으로 돌아가기</button></a>
+</div>
+<!-----------------고릴라------------------------>
+<div id="popup_layer4">
+	<div id="lable">성장</div>
+	<div>~짜잔~</div>
+	<img src="./img/푸딩.jpg"></img>
+		<div id="born3">
+		<div>푸딩(1세)/아기</div>
+		<div id="born2">"키워주셔서 감사했습니다</br>덕분에 훌륭한 푸딩으로 자랐어요"</div>
+		</div>
+	<a href="./게임.html"><button id="born-look">처음으로 돌아가기</button></a>
+</div>
+<!-----------------푸딩------------------------>
+<div id="popup_layer5">
+	<div id="lable">성장</div>
+	<div>~짜잔~</div>
+	<img src="./img/강아지풀.jpg"></img>
+		<div id="born3">
+		<div>강아지풀(1세)/아기</div>
+		<div id="born2">"키워주셔서 감사했습니다</br>덕분에 훌륭한 강아지풀로 자랐어요"</div>
+		</div>
+	<a href="./게임.html"><button id="born-look">처음으로 돌아가기</button></a>
+</div>
+<!-----------------강아지풀------------------------>
+
+
+<div id="popup_layer6">
+	<div id="lable">성장</div>
+	<img src="./img/부화.jpg"></img>
+	<div id="born">알에 금이가기 시작했어요
+	</br>
+	과연 뭐가 태어날까요?
+	</div>
+	<button id="look">결과보기</button>
+</div>
+<div id="overlay_t"></div>
+<div id="popup_layer11">
+<img src="./img/도움말.jpg"></img>
+
+</div>
+
+	</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<style>
+		body{
+				margin:0;
+				background-color:#F9423A;
+		}
+		nav{
+				padding-top:10px;
+				padding-bottom:10px;
+				text-align:center;
+				background-color:white;
+			}
+			nav a{
+				text-decoration-line:none;
+				color:black;
+			}
+			nav a:hover{
+				color:#F9423A;
+			}
+			hr{
+				margin-top:10px;
+				margin-bottom:0;
+			}
+			#d01{
+				text-align:center;
+			}
+			#txt,#sel{
+				box-sizing:border-box;
+				border:solid 4px black;
+				border-radius:10px;
+				font-size:25px;
+				width:700px;
+				height:80px;
+				padding:18px;
+				text-align:center;
+				background-color:white;
+				font-weight:bold;
+				margin:0 auto;
+				margin-bottom:150px;
+			}
+			#n1{
+				margin:30px;
+				width:300px;
+				padding:50px;
+				border:4px solid black;
+				text-align:center;
+				font-size:20px;
+				font-weight:bold;
+			}
+			#month{
+				margin:30px;
+				width:410px;
+				padding:50px;
+				border:4px solid black;
+				text-align:center;
+				font-size:20px;
+				font-weight:bold;
+			}
+			#d1{
+				margin:0 auto;
+				text-align:center;
+				width:700px;
+				box-sizing:border-box;
+				height:100px;
+				padding:18px;
+				margin-bottom:90px;
+				margin-top:80px;
+				font-weight:bold;
+			}
+			
+			#d2,#d5,#d8,#d11{
+				box-sizing:border-box;
+				margin:10px;
+				border:solid 4px black;
+				border-radius:10px;
+				font-size:25px;
+				width:700px;
+				height:80px;
+				padding:18px;
+				text-align:center;
+				margin-top:10px;
+				margin:0 auto;
+				background-color:white;
+				font-weight:bold;
+			}
+			#d3,#d6,#d9,#d12{
+				text-align:center;
+				margin-bottom:50px;
+				}
+			.p1{
+				font-weight:bold;
+				background-color:white;
+				width:345px;
+				height:70px;
+				border:4px solid black;
+				border-radius:10px;
+				box-sizing:border-box;
+				display:inline-block;
+				padding:16px;
+				font-size:25px;
+				}
+			#d13{
+				border:none;
+				background-color:white;
+				border:4px solid black;
+				font-size:30px;
+				text-align:center;
+				padding:20px;
+				width:300px;
+				border-radius:10px;
+			}
+			#d13:hover{
+				background-color:black;
+				color:white;
+			}
+			.c5{
+				text-align:center;
+				margin-top:40px;
+				margin-bottom:40px;
+			}
+			hr{
+				margin:0;
+			}
+			#t{
+				text-align:center;
+			}
+			#total{
+				margin:0 auto;
+				border: 4px solid black;
+				box-sizing:border-box;
+				width:800px;
+				margin-bottom:10px;
+			}
+			footer{
+				text-align:center;
+				background-color:#F9423A;
+				padding:10px;
+				clear:both;
+			}
+			#img{
+				margin:0 auto;
+				margin-top:20px;
+				margin-bottom:20px;
+				border:4px dashed black;
+				width:683px;
+				height:299px;
+			}
+			
+			
+	</style>
+	<script>
+		function show(){
+		var str ="";
+		var re1="",re2="",re3="",re4="";
+			if(form.t1.value==""){
+				alert("이름을 입력하세요.");
+				return;
+			}
+			if(form.select.value==""){
+				alert("태어난 월을 선택해주세요.");
+				return;
+			}
+			if(form.q1.value==0){
+				alert("첫번째 질문이 선택되지 않았습니다.");
+				return;
+			}
+			if(form.q2.value==0){
+				alert("두번째 질문이 선택되지 않았습니다.");
+				return;
+			}
+			if(form.q3.value==0){
+				alert("세번째 질문이 선택되지 않았습니다.");
+				return;
+			}
+			if(form.q4.value==0){
+				alert("마지막 질문이 선택되지 않았습니다.");	
+				return;
+			}
+			str=(parseInt(form.q1.value)+parseInt(form.q2.value)+parseInt(form.q3.value)+parseInt(form.q4.value));
+			console.log(str);
+			if(str==4||str==5){
+				document.write('<div id="r1" style="text-align:center; background-color:#F9423A; margin:0; font-size:40px; height:1300px;">'
+				+'<div id="title" style="margin-top:50px; border:7px dashed black; width:700px; height:250px; background-color:white; padding:45px; border-radius:10px; margin:0 auto; text-align:center; box-sizing:border-box;"><STRONG><span style="color:#F9423A;">'
+				+ form.select.value+'</span>'+'에 태어난</STRONG>'+
+				'<STRONG><span style="color:#F9423A;">'+ form.t1.value+'</span>'+'은</STRONG>'+
+				'<STRONG><div style="text-align:center; font-size:70px;" id="r1">아삭아삭 사과</div></STRONG></div>'
+				+'<div style="margin:0 auto; margin-top:10px;"><img src="./img/사과.jpg"></img></div>'+
+				'<a href="./폼과 자바스크립트.html"><div style="margin:0 auto; border:none; background-color:white; border:4px solid black; font-size:30px; text-align:center; padding:20px; width:300px; border-radius:10px; color:black;">시작으로</br>돌아가기</div></a>'
+				+'</div>'
+				);
+			}
+			if(str==6||str==7){
+				document.write('<div id="r1" style="text-align:center; background-color:#F9423A; margin:0; font-size:40px; height:1000px;">'
+				+'<div id="title" style="margin-top:50px; border:7px dashed black; width:700px; height:250px; background-color:white; padding:45px; border-radius:10px; margin:0 auto; text-align:center; box-sizing:border-box;"><STRONG><span style="color:#F9423A;">'
+				+ form.select.value+'</span>'+'에 태어난</STRONG>'+
+				'<STRONG><span style="color:#F9423A;">'+ form.t1.value+'</span>'+'은</STRONG>'+
+				'<STRONG><div style="text-align:center; font-size:70px;" id="r1">새콤달콤 딸기</div></STRONG></div>'
+				+'<div style="margin:0 auto; margin-top:10px;"><img src="./img/딸기.jpg"></img></div>'+
+				'<a href="./폼과 자바스크립트.html"><div style="margin:0 auto; border:none; background-color:white; border:4px solid black; font-size:30px; text-align:center; padding:20px; width:300px; border-radius:10px; color:black;">시작으로</br>돌아가기</div></a>'
+				+'</div>'
+				);
+			}
+			if(str==8){
+				document.write('<div id="r1" style="text-align:center; background-color:#F9423A; margin:0; font-size:40px; height:1000px;">'
+				+'<div id="title" style="margin-top:50px; border:7px dashed black; width:700px; height:250px; background-color:white; padding:45px; border-radius:10px; margin:0 auto; text-align:center; box-sizing:border-box;"><STRONG><span style="color:#F9423A;">'
+				+ form.select.value+'</span>'+'에 태어난</STRONG>'+
+				'<STRONG><span style="color:#F9423A;">'+ form.t1.value+'</span>'+'은</STRONG>'+
+				'<STRONG><div style="text-align:center; font-size:70px;" id="r1">톡톡튀는 포도</div></STRONG></div>'
+				+'<div style="margin:0 auto; margin-top:10px;"><img src="./img/포도.jpg"></img></div>'+
+				'<a href="./폼과 자바스크립트.html"><div style="margin:0 auto; border:none; background-color:white; border:4px solid black; font-size:30px; text-align:center; padding:20px; width:300px; border-radius:10px; color:black;">시작으로</br>돌아가기</div></a>'
+				+'</div>'
+				);
+			}
+		}
+		
+	</script>
+</head>
+<body>
+<nav>
+			<a href="./내 프로필.html" >
+			<STRONG>PROFILE</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./폼과 자바스크립트.html">
+			<STRONG>FORM</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./index.html">
+			<STRONG>HOME</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./제이쿼리 응용프로그램.html">
+			<STRONG>GAME</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./공공데이터.html">
+			<STRONG>AJAX</a></STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</nav>
+		<hr size="2px" color="black">
+		<div id="t"><STRONG>
+			<span style="font-size:60px;"></span></br>
+			<span style="font-size:40px;">다음 질문을 읽고</br>본인과 유사하다고 생각되는</br>선택지에 체크해주세요</br></br>▼</br></br></STRONG></span>
+			
+		</div>
+		<div id="total">
+	<form name="form" id="f1">
+		<div class="c0">
+			<div id="d1">
+				<span style="font-size:80px">Q0</span></br>
+				<span style="font-size:30px">당신에 대해</span>
+			</div>
+			<div id=d01>
+			<div id="txt">
+				<label id="l1">당신의 이름은?</label></br>
+				<input type="text" name="t1" id="n1" placeholder="입력하세요" ></div>
+			<div id="sel"><label id="l1">당신의 탄생월은?</label></br>
+				<select id="month" name="select">
+				<option value="">선택하세요</option>
+				<option value="1월">1월</option>
+				<option value="2월">2월</option>
+				<option value="3월">3월</option>
+				<option value="4월">4월</option>
+				<option value="5월">5월</option>
+				<option value="6월">6월</option>
+				<option value="7월">7월</option>
+				<option value="8월">8월</option>
+				<option value="9월">9월</option>
+				<option value="10월">10월</option>
+				<option value="11월">11월</option>
+				<option value="12월">12월</option>
+				</select>
+			</div>
+		<div class="c1">
+			<div id="d1">
+			<span style="font-size:80px">Q1</span></br>
+				<span style="font-size:30px">첫번째 질문</span>
+			</div>
+			<div id="d2">
+				나는 다른 사람들에게 내 자신을
+				<span style="color:#F9423A;">소개</span>하는게
+			</div>
+			<div id="img">
+				<img src="./img/소개.jpg"></img>
+			</div>
+		
+			<div id="d3">
+					<span class="p1"><input type="radio" name="q1" id="b1" value="1">
+					<label for="b1">너무 어려워!</label></span>
+					<span class="p1"><input type="radio" name="q1" id="b2" value="2">
+					<label for="b2">식은죽 먹기!</label></span>
+			</div>
+			</div>
+			
+			<div class="c2">
+			<div id="d1">
+				<span style="font-size:80px">Q2</span></br>
+				<span style="font-size:30px">두번째 질문</span>
+			</div>
+			<div id="d5">
+				어떤<span style="color:#F9423A;"> 칭찬</span>이 더 좋아?
+			</div>
+			<div id="img">
+				<img src="./img/칭찬.jpg"></img>
+			</div>
+		
+			<div id="d6">
+					<span class="p1"><input type="radio" name="q2" id="b3" value="1">
+					<label for="b3">노력했구나!</label></span>
+					<span class="p1"><input type="radio" name="q2" id="b4" value="2">
+					<label for="b4">잘했구나!</label></span>
+			</div>
+			</div>
+			
+			
+			<div class="c3">
+			<div id="d1">
+				<span style="font-size:80px">Q3</span></br>
+				<span style="font-size:30px">세번째 질문</span>
+			</div>
+			<div id="d8">
+				<span style="color:#F9423A;">여행</span>을 갈 때 나는?
+			</div>
+			<div id="img">
+				<img src="./img/여행.jpg"></img>
+			</div>
+		
+			<div id="d9">
+					<span class="p1"><input type="radio" name="q3" id="b5" value="1">
+					<label for="b5">계획 최고!</label></span>
+					<span class="p1"><input type="radio" name="q3" id="b6" value="2">
+					<label for="b6">즉흥 최고!</label></span>
+			</div>
+			</div>
+			
+			<div class="c4">
+			<div id="d1">
+				<span style="font-size:80px">Q4</span></br>
+				<span style="font-size:30px">마지막 질문</span>
+			</div>
+			<div id="d11">
+				<span style="color:#F9423A;">잠들기</span> 전 나는?
+			</div>
+			<div id="img">
+				<img src="./img/수면.jpg"></img>
+			</div>
+		
+			<div id="d12">
+					<span class="p1"><input type="radio" name="q4" id="b7" value="1">
+					<label for="b7">온갖 망상중!</label></span>
+					<span class="p1"><input type="radio" name="q4" id="b8" value="2">
+					<label for="b8">아무 생각 없음!</label></span>
+			</div>
+			</div>
+			</div>
+			</div>
+			
+		</form>
+		<div class="c5">
+				<input type="button" id="d13" value="결과보기" onclick="show();"></div>
+			</div>
+			</div>
+		<hr size="2px" color="black">
+		<footer>
+			<div id="f2">
+			<a href="https://mail.google.com/mail/u/0/"> <span style="color:black;" class="material-icons">email</span></a>
+			<span class="material-icons">smartphone</span>
+			<a href="https://www.instagram.com/"><span style="color:black;" class="material-icons">public</span></a>
+			</div>
+			<div id="f1"><STRONG>멀티미디어 공학과 20201136 임서현</STRONG></div>
+		</footer>
+</body>
+</html>
